@@ -9,3 +9,19 @@ def bubbleSort(array):
 
 a=[1,2,4,3,0,6,7,8,12,11] #edit as needed
 print(bubbleSort(a))
+#optimized bubble sort
+def bubbleSort(arr):
+    while True:
+        n=len(arr)
+        newi=0
+        for i in range(n-1):
+            if arr[i]>arr[i+1]:
+                arr[i],arr[i+1]=arr[i+1],arr[i]
+                newi=i
+        n=newi
+        if(n<1):
+            break
+    return arr
+arr=[5,4,3,2,1]
+print(bubbleSort(arr))
+                    
